@@ -15,8 +15,8 @@ app.use(express.static("doctors"));
 app.use(fileUpload());
 
 //for database and port setup
-const port = process.env.PORT;
-const database = process.env.DB;
+const port = process.env.PORT || 5000;
+const database = process.env.DB_PATH;
 
 // Create a connection with MongoClient
 let client = new MongoClient(database, {
